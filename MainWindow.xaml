@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="TeachingTipTarget.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TeachingTipTarget"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+
+
+  <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+    <StackPanel.Resources>
+      <TeachingTip x:Name="TeachingTipGuide"
+                 Title="Teaching Tip Guide"
+                 IsLightDismissEnabled="False"
+                 CloseButtonContent="Exit Guide"
+                 ActionButtonContent="Next"
+                 ActionButtonClick="TeachingTipGuide_ActionButtonClick"/>
+    </StackPanel.Resources>
+
+    <Button x:Name="ButtonTeachingTips"
+            Content="Show Teaching Tips"
+            Click="ButtonTeachingTips_Click"/>
+    <TextBox x:Name="TextBoxStep1"
+             Width="400"/>
+    <CalendarDatePicker x:Name="CalendarDatePickerStep2"
+                        PlaceholderText="Planned start"
+                        ToolTipService.ToolTip="Planned start date for the project"
+                        HorizontalAlignment="Left"/>
+    <RadioButtons x:Name="RadioButtonsStep3"
+                  MaxColumns="3">
+      <RadioButton Content="Option 1"/>
+      <RadioButton Content="Option 2"/>
+      <RadioButton Content="Option 3"/>
+    </RadioButtons>
+
+  </StackPanel>
+
+
+</Window>

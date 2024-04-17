@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TeachingTipTarget (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "TeachingTipTarget (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
